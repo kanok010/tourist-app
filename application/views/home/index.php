@@ -1,8 +1,6 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h2>Welcome <?php echo get_instance()->config->base_url('', NULL); ?></h2>
-   <a href="home/logout">Logout</a>
       <h1>
         Dashboard
         <small>Control panel</small>
