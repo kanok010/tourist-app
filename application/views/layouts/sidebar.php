@@ -18,31 +18,62 @@
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-users"></i>
+            <span>Users</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-credit-card"></i>
+            <span>Payment (Top up)</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Credit Card</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 7-11</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
+            <i class="fa fa-shopping-cart"></i>
+            <span>Topping</span>
             <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
+              <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Item 1</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Item 2</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa fa-files-o"></i>
+            <span>Reports</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Report 1</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Report 2</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Report 3</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Report 4</a></li>
           </ul>
         </li>
         <li>
+          <a href="#">
+            <i class="fa fa-file-text-o"></i>
+            <span>App Logs</span>
+          </a>
+        </li>
+        <!--<li>
           <a href="pages/widgets.html">
             <i class="fa fa-th"></i> <span>Widgets</span>
             <span class="pull-right-container">
@@ -183,6 +214,7 @@
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        -->
       </ul>
     </section>
     <!-- /.sidebar -->
