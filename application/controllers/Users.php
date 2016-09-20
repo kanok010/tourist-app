@@ -24,7 +24,8 @@ class Users extends CI_Controller {
             $data = array(
                 'users'=>$users,
                 'username'=>$session_data['username'],
-                'content'=>'users/index'
+                'content'=>'users/index',
+                'menu'=>'users'
             );
             $this->load->view('layouts/default',$data);
         }else{
