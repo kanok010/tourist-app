@@ -13,25 +13,24 @@ class Home extends CI_Controller {
         
         function index()
         {
-          if($this->session->userdata('logged_in'))
-          {
-            $session_data = $this->session->userdata('logged_in');
-       
-            $data = array('username'=>$session_data['username'],'content'=>'home/index');
-	    $this->load->view('layouts/default',$data);
-          }else
+            if($this->session->userdata('logged_in'))
             {
-              //If no session, redirect to login page
-              redirect('login', 'refresh');
+                $session_data = $this->session->userdata('logged_in');
+
+                $data = array('username'=>$session_data['username'],'content'=>'home/index');
+                $this->load->view('layouts/default',$data);
+            }else{
+                //If no session, redirect to login page
+                redirect('login', 'refresh');
             }
          
         }
 
         function logout()
         {
-          $this->session->unset_userdata('logged_in');
-          session_destroy();
-          redirect('home', 'refresh');
+            $this->session->unset_userdata('logged_in');
+            session_destroy();
+            redirect('home', 'refresh');
         }
 	
 	
