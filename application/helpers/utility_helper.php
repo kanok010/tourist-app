@@ -2,7 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 date_default_timezone_set("Asia/Bangkok");
 
-
+        function debuga($arr){
+            echo"==><br/>";
+            echo"<pre>";
+            print_r ($arr);
+            echo"</pre>";
+        }
 
 	function ClassLoad($class_name=NULL,$type=".php"){
 		$path = "controllers/";
