@@ -2,7 +2,13 @@
 
     defined('BASEPATH') OR exit('No direct script access allowed');  
     //require(APPPATH.'libraries/REST_Controller.php');  
- 
+    function __construct()
+    {
+        // Construct the parent class
+        parent::__construct();
+        $this->load->database();
+       
+    }
     class Profile extends CI_Controller{
         
         public function getCDBData($msisdn){            
@@ -72,9 +78,16 @@
         
         public function getAccountProfile($msisdn){
    
-            $data = $this->getCDBData($msisdn);
-           
-            debuga($data);
+            $redis = new Redis();
+            $redis->connect(REDIS_HOST, REDIS_PORT);
+            $key = "msisdn:".$msisdn;
+            $data = $redis->hgetall($key);
+            if($data){
+                debuga($data); 
+            }else{
+                $data = $this->getCDBData($msisdn);
+                debuga($data);
+            }
            
         }
         
@@ -97,5 +110,63 @@
                 echo "no";
                 
             } 
+        }
+        
+
+        public function isTouristPricePlan($msisdn){
+            
+           
+            $redis = new Redis();
+            $redis->connect(REDIS_HOST, REDIS_PORT);
+            $key = "msisdn:".$msisdn;
+            $data = $redis->hgetall($key);
+            if($data){
+                debuga($data); 
+            }else{
+                $data = $this->getCDBData($msisdn);
+                debuga($data);
+            }
+            //debuga($data);
+            if(is_array($data)){
+                if($data['STATUS']=="active"){
+                   $price_plan = $data['PRICEPLAN']; 
+                   debuga($price_plan);
+                   $this->load->database();
+                   $this->load->model('PricePlan_m');
+                   $data = $this->PricePlan_m->check_price_plan($price_plan);
+                   
+                   debuga($data);
+                }else{
+                    
+                    echo "no";
+                    
+                } 
+            }else{
+               
+                echo "no";
+                
+            } 
+        }
+        
+        function redis(){
+
+           //Connecting to Redis server on localhost
+            $redis = new Redis();
+            $redis->connect(REDIS_HOST, REDIS_PORT);
+            $key = 'msisdn:12347';
+            $redis->set($key, 'age', 86400);
+            $test = $redis->get($key);
+            if($test)
+            {
+                print_r($redis->get('$key'));
+            }
+          
+
+
+           
+            // finally
+           // $data = $redis->hgetall($key);
+          //  print_r($data); // returns all key-value that belongs to the hash
+
         }
     }
