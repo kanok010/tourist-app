@@ -4,7 +4,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url('assets/dist/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $username; ?></p>
@@ -25,6 +25,16 @@
             <i class="fa fa-users"></i>
             <span>Users</span>
           </a>
+        </li>
+        <li class="<?php if($menu == 'price-plan' || $menu == 'price-plan-add') { echo 'active'; }?>  treeview">
+          <a href="<?php echo site_url('priceplan');?>">
+            <i class="fa fa-file-text-o"></i>
+            <span>Price Plan</span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="<?php if($menu == 'price-plan') { echo 'active'; }?>"><a href="<?php echo site_url('priceplan');?>"><i class="fa fa-circle-o"></i> Manage Price Plan</a></li>   
+            <li class="<?php if($menu == 'price-plan-add') { echo 'active'; }?>"><a href="<?php echo site_url('priceplan/create');?>"><i class="fa fa-circle-o"></i> Add Price Plan</a></li>            
+          </ul>  
         </li>
         <li class="treeview">
           <a href="#">
