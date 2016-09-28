@@ -39,27 +39,7 @@ class Home extends CI_Controller {
             redirect('home', 'refresh');
         }
         
-        function redis(){
 
-           //Connecting to Redis server on localhost
-            $redis = new Redis();
-            $redis->connect(REDIS_HOST, REDIS_PORT);
-            $key = 'msisdn:12347';
-           $redis->set($key, 'age', 86400);
-            $test = $redis->get($key);
-            if($test)
-            {
-                print_r($redis->get('$key'));
-            }
-          
-
-
-           
-            // finally
-           // $data = $redis->hgetall($key);
-          //  print_r($data); // returns all key-value that belongs to the hash
-
-        }
         
         function error404(){
             if($this->session->userdata('logged_in'))
