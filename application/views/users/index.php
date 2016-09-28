@@ -34,7 +34,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($users as $row){?>    
+                            <?php foreach ($data as $row){?>    
                             <tr>
                               <td><?php echo $row['id'];?></td>
                               <td><?php echo $row['username'];?></td>
@@ -45,7 +45,7 @@
                               <td class="text-center">                                  
                                   <i class="fa fa-search" aria-hidden="true"></i>&nbsp; | &nbsp;
                                 
-                                  <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; | &nbsp;
+                                  <a href="<?php echo site_url('users/edit/'.$row['id']);?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp; | &nbsp;
                                   
                                   <i class="fa fa-trash-o" aria-hidden="true"></i>
                               </td>
