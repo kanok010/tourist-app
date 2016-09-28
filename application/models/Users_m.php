@@ -20,7 +20,7 @@ class Users_m extends CI_Model{
         return $data;
     }
     
-    public function get_users($id) {
+    public function get_users_by_id($id) {
         if($id != FALSE) {
           $query = $this->db->get_where('users', array('id' => $id));
           return $query->row_array();
