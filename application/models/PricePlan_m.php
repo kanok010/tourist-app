@@ -29,6 +29,16 @@ class PricePlan_m extends CI_Model {
           return FALSE;
         }
     }
+    
+    public function check_price_plan($price_plan){
+        if($price_plan) {
+          $query = $this->db->get_where('price_plan', array('price_plan' => $price_plan));
+          return $query->num_rows();
+        }
+        else {
+          return FALSE;
+        }
+    }
     public function create($data) {
 
         $this->db->insert('price_plan', $data);
