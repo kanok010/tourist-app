@@ -20,7 +20,7 @@
                 <!-- Horizontal Form -->
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">New Price Plan</h3>
+                        <h3 class="box-title">New Reward</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
@@ -28,24 +28,54 @@
                       <div class="box-body">
                           
                         <div class="form-group">
-                          <label for="package_name" class="col-sm-2 control-label">Package Name</label>
+                          <label for="package_name" class="col-sm-2 control-label">Title</label>
 
                           <div class="col-sm-10">
-                              
-                             
-
                             <input type="text" class="form-control" id="package_name" name="package_name" placeholder="Package Name" value="">
                          
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="price_plan" class="col-sm-2 control-label">Price Plan</label>
+                          <label for="price_plan" class="col-sm-2 control-label">Detail</label>
 
                           <div class="col-sm-10">
                               <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
                             
                           </div>
                         </div>
+                        <div class="form-group">
+                          <label for="price_plan" class="col-sm-2 control-label">Image</label>
+
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
+                            
+                          </div>
+                        </div>
+                         <div class="form-group">
+                          <label for="price_plan" class="col-sm-2 control-label">Point</label>
+
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
+                            
+                          </div>
+                        </div> 
+                        <div class="form-group">
+                          <label for="price_plan" class="col-sm-2 control-label">Condition</label>
+
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
+                            
+                          </div>
+                        </div>
+                          
+                          <div class="form-group">
+                          <label for="price_plan" class="col-sm-2 control-label">Date range:</label>
+
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control pull-right" id="reservation">
+                            
+                          </div>
+                        </div> 
                         <div class="form-group">
                           <label for="status" class="col-sm-2 control-label">Status</label>
 
