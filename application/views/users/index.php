@@ -25,11 +25,11 @@
                             <thead>
                             <tr>
                               <th>ID</th>                              
-                              <th>Username</th>
-                              <th>Name</th>
+                              <th style="width: 20%">Name</th>
                               <th>Email</th>
+                              <th>Phone</th>
+                              <th>Address</th>
                               <th>Create on</th>
-                              <th>Last Modified</th>
                               <th>Actions</th>
                             </tr>
                             </thead>
@@ -37,14 +37,13 @@
                             <?php foreach ($data as $row){?>    
                             <tr>
                               <td><?php echo $row['id'];?></td>
-                              <td><?php echo $row['username'];?></td>
+                              
                               <td><?php echo $row['firstname']." ".$row['lastname'];?></td>
                               <td><?php echo $row['email'];?></td>
+                              <td><?php echo $row['phone'];?></td>
+                              <td><?php echo $row['address'];?></td>
                               <td><?php echo $row['create_date'];?></td>
-                              <td><?php echo $row['update_date'];?></td>
                               <td class="text-center">                                  
-                                  <i class="fa fa-search" aria-hidden="true"></i>&nbsp; | &nbsp;
-                                
                                   <a href="<?php echo site_url('users/edit/'.$row['id']);?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp; | &nbsp;
                                   
                                   <i class="fa fa-trash-o" aria-hidden="true"></i>
