@@ -1,16 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of PricePlan_m
- *
- * @author Kanok76
- */
 class PricePlan_m extends CI_Model {
     function get_all_data() {
         $this->db->select('*');
@@ -47,7 +36,7 @@ class PricePlan_m extends CI_Model {
     
     public function update_data($data)
     {
-        debuga($data);
+       //debuga($data);
        $this->db->set('package_name',$data['package_name'])
                 ->set('price_plan',$data['price_plan'])
                 ->set('status',$data['status'])
