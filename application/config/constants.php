@@ -87,3 +87,6 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 //Redis
 defined('REDIS_HOST')  OR define('REDIS_HOST', '127.0.0.1');
 defined('REDIS_PORT')  OR define('REDIS_PORT', 6379);
+
+//CDB IP
+defined('CDB_IP')  OR define('CDB_IP', '172.19.188.7:10080');
