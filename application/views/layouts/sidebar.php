@@ -20,6 +20,12 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
+        <li class="<?php if($menu == 'users') { echo 'active'; }?>  treeview">
+          <a href="<?php echo site_url('users');?>">
+            <i class="fa fa-users"></i>
+            <span>Users</span>
+          </a>
+        </li>
         <li class="<?php if($menu == 'price-plan' || $menu == 'price-plan-add') { echo 'active'; }?>  treeview">
           <a href="<?php echo site_url('priceplan');?>">
             <i class="fa fa-file-text-o"></i>
@@ -30,14 +36,9 @@
             <li class="<?php if($menu == 'price-plan-add') { echo 'active'; }?>"><a href="<?php echo site_url('priceplan/create');?>"><i class="fa fa-circle-o"></i> Add Price Plan</a></li>            
           </ul>  
         </li>
-        <li class="<?php if($menu == 'users') { echo 'active'; }?>  treeview">
-          <a href="<?php echo site_url('users');?>">
-            <i class="fa fa-users"></i>
-            <span>Users</span>
-          </a>
-        </li>
 
-        <li class="<?php if($menu == 'redeem') { echo 'active'; }?>  treeview">
+
+        <li class="<?php if($menu == 'reward' || $menu == 'reward-add') { echo 'active'; }?>  treeview">
           <a href="<?php echo site_url('reward');?>">
             <i class="fa fa-gift"></i>
             <span>Reward</span>
@@ -46,8 +47,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('reward');?>"><i class="fa fa-circle-o"></i> Manage Reward</a></li>
-            <li><a href="<?php echo site_url('reward/create');?>"><i class="fa fa-circle-o"></i> Add Reward</a></li>
+            <li class="<?php if($menu == 'reward') { echo 'active'; }?>"><a href="<?php echo site_url('reward');?>"><i class="fa fa-circle-o"></i> Manage Reward</a></li>
+            <li class="<?php if($menu == 'reward-add') { echo 'active'; }?>"><a href="<?php echo site_url('reward/create');?>"><i class="fa fa-circle-o"></i> Add Reward</a></li>
           </ul>
         </li>
         <li class="<?php if($menu == 'redeem') { echo 'active'; }?>  treeview">
@@ -59,7 +60,7 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-credit-card"></i>
-            <span>Payment (Top up)</span>
+            <span>Payment</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -72,7 +73,7 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-shopping-cart"></i>
-            <span>Topping</span>
+            <span>Buy Package</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -101,12 +102,6 @@
           <a href="<?php echo site_url('admin');?>">
             <i class="fa fa-user"></i>
             <span>Admin</span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-file-text-o"></i>
-            <span>App Logs</span>
           </a>
         </li>
       </ul>
