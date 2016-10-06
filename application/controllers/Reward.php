@@ -7,6 +7,7 @@ class Reward extends CI_Controller{
     {
         // Construct the parent class
         parent::__construct();
+        date_default_timezone_set('Asia/Bangkok');
         $this->load->database();
         $this->load->model('Reward_m');
     }
@@ -47,13 +48,13 @@ class Reward extends CI_Controller{
 
             $this->form_validation->set_error_delimiters('<div class="alert alert-warning alert-dismissible">', '</div>');
 
-            //Validating Package Name Field
-            $this->form_validation->set_rules('package_name', 'Package Name', 'required');
+            
+            $this->form_validation->set_rules('title', 'Title', 'required');
 
-            //Validating Price Plan Field
-            $this->form_validation->set_rules('price_plan', 'Price Plan', 'required');
+            $this->form_validation->set_rules('detail', 'Detail', 'required');
 
-            //Validating Status Field
+            $this->form_validation->set_rules('date_range', 'Start Date - End Date', 'required');
+
             $this->form_validation->set_rules('status', 'Status', 'required');
 
             if ($this->form_validation->run() == FALSE) {
@@ -61,16 +62,34 @@ class Reward extends CI_Controller{
                            'data' => '',
                            'username'=>$session_data['username'],
                            'content'=>"reward/create",
-                           'menu'=>'price-plan-add',
+                           'menu'=>'reward-add',
                            'js_files' => array() ,
                            'css_files' => array()));
             } else {
+                
+                    if($_FILES['image']['name']){
+			$config['upload_path'] = 'addons/default/modules/articles/uploads/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			//$ends  = $this->get_extension($_FILES['userfile']['name']);		
+			$ends=end(explode(".",$_FILES['userfile']['name']));
+			$config['file_name']	= "articles_".time();		
+			$filename=$config['file_name'].".".$ends;
+			$this->load->library('upload', $config);
+			$this->upload->do_upload();
+                    }
+            
                 //Setting values for tabel columns
                 $data = array
                 (                 
-                  'package_name' => $this->input->post('package_name'),
-                  'price_plan' => $this->input->post('price_plan'),
-                  'status' => $this->input->post('status')
+                    'title' => $this->input->post('title'),
+                    'detail' => $this->input->post('detail'),
+                    'image' => $this->input->post('image'),
+                    'point' => $this->input->post('point'),
+                    'condition' => $this->input->post('condition'),
+                    'start_date' => $this->input->post('start_date'),
+                    'end_date' => $this->input->post('end_date'),
+                    'status' => $this->input->post('status'),
+                    'create_on' => date('Y-m-d H:i:s')
                 );
                 //Transfering data to Model
                 if($this->Reward_m->create($data)){
