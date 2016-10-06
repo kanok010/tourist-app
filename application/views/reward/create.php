@@ -21,6 +21,7 @@
                 <div class="box box-primary">
                     <div class="box-header with-border">
                         <h3 class="box-title">New Reward</h3>
+                        <p class="text-right text-red">* Required field</p>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
@@ -28,58 +29,59 @@
                       <div class="box-body">
                           
                         <div class="form-group">
-                          <label for="package_name" class="col-sm-2 control-label">Title</label>
+                            <label for="package_name" class="col-sm-3 control-label">Title <span class="text-red">*</span></label>
 
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" id="package_name" name="package_name" placeholder="Package Name" value="">
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="">
                          
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="price_plan" class="col-sm-2 control-label">Detail</label>
+                          <label for="price_plan" class="col-sm-3 control-label">Detail <span class="text-red">*</span></label>
 
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="detail" name="detail" placeholder="Detail" value="">
                             
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="price_plan" class="col-sm-2 control-label">Image</label>
+                          <label for="price_plan" class="col-sm-3 control-label">Image</label>
 
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
-                            
+                          <div class="col-sm-9">
+                             
+                            <input type="file" id="exampleInputFile">
+
+                            <p class="help-block">File type .gif, .jpeg, .jpg, .png only</p>
                           </div>
                         </div>
                          <div class="form-group">
-                          <label for="price_plan" class="col-sm-2 control-label">Point</label>
+                          <label for="price_plan" class="col-sm-3 control-label">Point</label>
 
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="point" name="point" placeholder="Point" value="">
                             
                           </div>
-                        </div> 
+                        </div>
                         <div class="form-group">
-                          <label for="price_plan" class="col-sm-2 control-label">Condition</label>
+                          <label for="price_plan" class="col-sm-3 control-label">Condition</label>
 
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="price_plan" name="price_plan" placeholder="Price Plan" value="">
-                            
+                          <div class="col-sm-9">
+                              <textarea class="form-control" rows="5" placeholder="Condition"  name="image"></textarea>
                           </div>
                         </div>
                           
                           <div class="form-group">
-                          <label for="price_plan" class="col-sm-2 control-label">Date range:</label>
+                          <label for="price_plan" class="col-sm-3 control-label">Start Date - End Date <span class="text-red">*</span></label>
 
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control pull-right" id="reservation">
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control pull-right" name="date_range" id="reservation">
                             
                           </div>
                         </div> 
                         <div class="form-group">
-                          <label for="status" class="col-sm-2 control-label">Status</label>
+                          <label for="status" class="col-sm-3 control-label">Status <span class="text-red">*</span></label>
 
-                          <div class="col-sm-10">
+                          <div class="col-sm-9">
                             <select class="form-control" name="status">
                                 <option value="1">Enable</option>
                                 <option value="0">Disable</option>
